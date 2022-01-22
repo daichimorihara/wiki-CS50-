@@ -1,0 +1,20 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    encyclopedia
+{% endblock %}
+    
+{% block body %}
+    {% if invalidInputOrAlreadyExist %}
+        <h1>Invalid Input or this Title already Exist. Try Again</h1>
+    {% endif %}
+
+    <h1>Create a new Wiki Page!!</h1>
+
+    <form action="{% url 'create' %}" method="post">
+        {% csrf_token %}
+        {{ createForm }}
+        <input class="btn btn-default" type="submit" value="Submit">
+    </form>
+{% endblock %}
+

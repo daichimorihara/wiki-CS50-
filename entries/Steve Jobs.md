@@ -1,0 +1,1 @@
+He is founder of Apple.Inc and inventor of iPhone.
